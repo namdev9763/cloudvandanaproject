@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Survey Form using HTML and CSS
+	</title>
+	<link rel="stylesheet" href="customer survey form.css">
+</head>
+<body>
+	<h1>Survey Form</h1>
+	<form id="surveyForm" onsubmit="return false;">
+		<div class="form-control">
+			<label for="firstName" id="label-name">First Name: </label>
+			<input type="text" id="firstName" required placeholder="Enter your first name" />
+		</div>
+		<div class="form-control">
+			<label for="lastName" id="label-name">Last Name:</label>
+			<input type="text" id="lastName" required placeholder="Enter your last name">
+		</div>
+		<div class="form-control">
+			<label for="dob">Date of Birth:</label>
+			<input type="date" id="dob" required>
+		</div>
+
+		<div class="form-control">
+			<label for="country">Country:</label>
+			<select id="country" required>
+				<option value="INDIA">INDIA</option>
+				<option value="USA">USA</option>
+				<option value="Canada">Canada</option>
+				<option value="UK">UK</option>
+				<option value="OTHER">OTHER</option>
+
+			</select>
+		</div>
+		<div class="form-control">
+			<label>Gender:</label>
+			<input type="radio" id="male" value="Male" name="gender"> Male
+			<input type="radio" id="female" value="Female" name="gender"> Female
+			<input type="radio" id="other" value="Other" name="gender"> Other
+		</div>
+
+		<div class="form-control">
+			<label for="profession">Profession:</label>
+			<input type="text" id="profession" required placeholder="Enter your profession">
+		</div>
+
+		<div class="form-control">
+			<label for="email">Email:</label>
+			<input type="email" id="email" required required placeholder="Enter your email id">
+		</div>
+
+		<div class="form-control">
+			<label for="mobile">Mobile Number:</label>
+			<input type="tel" id="mobile" required required placeholder="Enter your email id">
+		</div>
+
+		<input type="submit" value="Submit" onclick="submitForm()">
+		<input type="button" value="Reset" onclick="resetForm()">			
+	</form>
+	<div id="popup" class="popup">
+		<div class="popup-content" id="popup-content"></div>
+		<button onclick="closePopup()" class="closebtn">Close</button>
+	  </div>
+    <script src="customer survey form.js"></script>
+       
+    <footer> @ 2023 Customer Survey Form All Rights Reserved | Design By <span>Namdev Mulik</span> </footer>
+</body>
+
+</html>
